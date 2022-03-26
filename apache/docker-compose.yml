@@ -1,0 +1,9 @@
+version: "3"
+services:
+  my_apach:
+    image: php:7.2-apache
+    ports:
+      - 9090:80
+    volumes:
+      - ./files:/var/www/html
+     # - ./000-default.conf:/etc/apache2/sites-avaliable/000-default.conf

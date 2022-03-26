@@ -1,0 +1,3 @@
+FROM php:7.2-apache
+ADD ./files /var/www/html
+COPY ./000-default.conf /usr/local/apahce2/conf/httpd.conf

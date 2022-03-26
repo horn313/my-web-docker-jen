@@ -1,0 +1,19 @@
+version: "3"
+services:
+  nginx:
+   image: nginx:alpine
+   ports:
+    - 80:80
+   container_name: nginx_compose_image
+   volumes:
+    - ./nginx/html:/usr/share/nginx/html
+    - ./nginx/nginx/:/etc/nginx/
+#   links:
+#    - "apache:apache"
+  apache:
+    image: php:7.2-apache
+    ports:
+     - 8081:80
+    volumes:
+    - ./apache/files:/var/www/html
+#    - ./apache/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
