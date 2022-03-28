@@ -4,7 +4,6 @@ services:
    image: nginx:alpine
    ports:
     - 80:80
-   container_name: nginx_compose_image
    volumes:
     - ./nginx/html:/usr/share/nginx/html
     - ./nginx/nginx/:/etc/nginx/
